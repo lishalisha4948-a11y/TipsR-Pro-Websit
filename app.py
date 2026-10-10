@@ -6,11 +6,13 @@ import requests
 from dotenv import load_dotenv
 from openai import OpenAI
 
+
 app = Flask(__name__)
-app.config["UPLOAD_FOLDER"] = os.path.join(os.path.dirname(__file__), "uploads")
+app.config["UPLOAD_FOLDER"] = "/tmp/uploads"
 os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
 WHATSAPP = "918423426200"
+
 
 load_dotenv()
 GOOGLE_SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwpJcYxiIXOcQQheYniuVvTW_lLvdwO9lTjd6nRPmXGxTekn6b5teW2cgrlEOSDKXj__Q/exec"
