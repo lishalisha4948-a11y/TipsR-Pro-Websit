@@ -1,2 +1,10 @@
-[tool.vercel]
-entrypoint = "app:app"
+[project]
+name = "tipsr-pro"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "Flask>=3.0.0,<4",
+    "requests",
+    "python-dotenv",
+    "openai",
+]
